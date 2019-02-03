@@ -7,12 +7,11 @@ You need to install the following before you can use iostart_retporter:
 
 ## Monitoring
 In order to monitor and collect disk statistics you can use iostat_reporter in monitoring mode.
-Use -m parameter for monitoring mode and -d disk parameter to set the disk device you want to monitor
+Use -m <disk> parameter to monitor the specified disk using iostat exteded mode. <br>
 e.g.
-`    ./iostat_reporter.sh -m -d sda`
+`    ./iostat_reporter.sh -m sda`
 
-This will log statistics in iostat.log file. 
-Iostat_reporter uses iostat extended mode to monitor all disk properties available through iostat. Each line also contains a timestamp.
+This will log statistics in iostat.log file. Each line of the produced file contains a timestamp and all disk metrics of iostat extended statistics.
 e.g.
 ```
 2019-02-03 14:55:08 sda     0,03     9,73    0,29    9,77     0,01     0,24    51,17     0,85   84,91   17,06   86,91   7,20   7,24
@@ -37,8 +36,7 @@ will create an iostat_report folder containing all graphs and io_stat.html with 
 ```
 Usage: ./iostat_reporter.sh 
     -h          Print this help message. 
-    -m          Monitor mode. Collects io statistics using iostat extended mode. Use -d option to select the disk device to monitor. 
-    -d disk     The disk device to monitor. Required in monitor mode. 
+    -m disk     Monitor mode. Collects io statistics using iostat extended mode. Use -d option to select the disk device to monitor. 
     -o output   The output file to log iostat metrics when in monitor mode. Default iostat.log 
     -i interval Specifies the amount of time in seconds between each report. Used in monior mode. Default 2 seconds 
     -p file     Generate graphical report based on collected iostat data and logged in file. The format of the file requires data and time at the begginning of each line. The tool will create a folder containing and html with the report. 
