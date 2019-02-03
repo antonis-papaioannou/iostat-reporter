@@ -1,4 +1,4 @@
-iostat_reporter is a disk monitoring and reporting tool. It uses iostat for monitoring and gnuplot to generate iostat graphical reports.
+`iostat_reporter` is a disk monitoring and reporting script. It uses iostat for monitoring and gnuplot to generate iostat graphical reports.
 
 ## Dependencies
 You need to install the following before you can use iostart_retporter:
@@ -34,11 +34,11 @@ will create an iostat_report folder containing all graphs and io_stat.html with 
 
 
 ## Usage
-Usage: ./iostat_reporter.sh
-    -h          Print this help message.
-    -m          Monitor mode. Collects io statistics using iostat extended mode. Use -d option to select the disk device to monitor.
-    -d disk     The disk device to monitor. Required in monitor mode.
-    -o output   The output file to log iostat metrics when in monitor mode. Default iostat.log
-    -i interval Specifies the amount of time in seconds between each report. Used in monior mode. Default 2 seconds
-    -p file     Generate graphical report based on collected iostat data and logged in file. The format of the file requires data and time at the begginning of each line. The tool will create a folder containing and html with the report.
+Usage: ./iostat_reporter.sh <br>
+    -h          Print this help message. <br>
+    -m          Monitor mode. Collects io statistics using iostat extended mode. Use -d option to select the disk device to monitor. <br>
+    -d disk     The disk device to monitor. Required in monitor mode. <br>
+    -o output   The output file to log iostat metrics when in monitor mode. Default iostat.log <br>
+    -i interval Specifies the amount of time in seconds between each report. Used in monior mode. Default 2 seconds <br>
+    -p file     Generate graphical report based on collected iostat data and logged in file. The format of the file requires data and time at the begginning of each line. The tool will create a folder containing and html with the report. <br>
 
